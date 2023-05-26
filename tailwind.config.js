@@ -15,6 +15,9 @@ module.exports = {
           lighter: "#45556C",
         },
       },
+      width: {
+        "90%": "90%",
+      },
     },
   },
   plugins: [],
