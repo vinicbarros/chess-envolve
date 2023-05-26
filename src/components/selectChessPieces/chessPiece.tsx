@@ -14,7 +14,6 @@ export default function ChessPiece({
 
   const checkIfCartHavethisPiece = (id: number) => {
     const teste = cart.filter((piece) => piece.id === id);
-
     if (teste.length > 0) return true;
     return false;
   };
