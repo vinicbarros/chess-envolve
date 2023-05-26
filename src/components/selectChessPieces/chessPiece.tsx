@@ -1,6 +1,8 @@
 "use client";
 
+import { useMainContext } from "@/context/mainContext";
 import { piecesDataType } from "@/types/piecesTypes";
+import { useState } from "react";
 import { styled } from "styled-components";
 
 export default function ChessPiece({
@@ -8,8 +10,28 @@ export default function ChessPiece({
 }: {
   chessPiece: piecesDataType;
 }) {
+  const { setCart, cart } = useMainContext();
+
+  const checkIfCartHavethisPiece = (id: number) => {
+    const teste = cart.filter((piece) => piece.id === id);
+
+    if (teste.length > 0) return true;
+    return false;
+  };
+
+  const handleClick = (chessPiece: piecesDataType) => {
+    if (checkIfCartHavethisPiece(chessPiece.id)) {
+      setCart((prev) => prev.filter((piece) => piece.id !== chessPiece.id));
+    } else if (!checkIfCartHavethisPiece(chessPiece.id)) {
+      setCart((prev) => [chessPiece, ...prev]);
+    }
+  };
+
   return (
-    <ChessBox>
+    <ChessBox
+      $clicked={checkIfCartHavethisPiece(chessPiece.id)}
+      onClick={() => handleClick(chessPiece)}
+    >
       <InfoBox>
         <Title>{chessPiece.name}</Title>
         <Description>{chessPiece.description}</Description>
@@ -22,7 +44,7 @@ export default function ChessPiece({
   );
 }
 
-const ChessBox = styled.div`
+const ChessBox = styled.div<ChessBoxProps>`
   width: calc(33.33% - 10px);
   height: 216px;
   background-color: #45556c;
@@ -31,6 +53,11 @@ const ChessBox = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+
+  position: relative;
+
+  border: ${(props) =>
+    props.$clicked ? "4px solid green " : "4px solid #45556c"};
 
   @media (max-width: 1250px) {
     width: calc(50% - 10px);
@@ -48,6 +75,10 @@ const ChessBox = styled.div`
     height: 238px;
   }
 `;
+
+interface ChessBoxProps {
+  $clicked: boolean;
+}
 
 const StyledImage = styled.img``;
 
@@ -69,10 +100,16 @@ const InfoBox = styled.div`
 `;
 
 const ImageBox = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: center;
+
+  position: absolute;
+  bottom: 4px;
+  left: 0;
 `;
 
 const PieceValue = styled.h2`
