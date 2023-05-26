@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import { MainContextProvider } from "@/context/mainContext";
 import "@/styles/globals.css";
 import { Open_Sans as MainFont } from "next/font/google";
@@ -16,8 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={mainFont.className}>
-      <body className="bg-ocean-dark text-white dark:text-white">
-        <MainContextProvider>{children}</MainContextProvider>
+      <body
+        className="bg-ocean-dark text-white dark:text-white"
+        suppressHydrationWarning={true}
+      >
+        <MainContextProvider>
+          <Header />
+          {children}
+        </MainContextProvider>
       </body>
     </html>
   );
