@@ -17,4 +17,13 @@ const Box = styled.section`
   @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
+
+  section:nth-child(2) {
+    margin-left: 21px;
+
+    @media screen and (max-width: 1024px) {
+      margin-left: 0px;
+      margin-top: 21px;
+    }
+  }
 `;
