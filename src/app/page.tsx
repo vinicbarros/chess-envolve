@@ -1,3 +1,4 @@
+import CheckListPieces from "@/components/chessPiecesCart/checkListPieces";
 import BoxWrapper from "@/components/common/boxWrapper";
 import MappedPieces from "@/components/selectChessPieces/mappedPieces";
 import { piecesDataType } from "@/types/piecesTypes";
@@ -24,7 +25,11 @@ export default async function Home() {
         <DynamicContainer>
           <BoxWrapper
             title="Passo 01 - Selecione Peças"
-            element={<MappedPieces chessPieces={data} />}
+            element={<MappedPieces data={data} />}
+          />
+          <BoxWrapper
+            title="Passo 02 - Revise a seleção"
+            element={<CheckListPieces />}
           />
         </DynamicContainer>
       </main>
