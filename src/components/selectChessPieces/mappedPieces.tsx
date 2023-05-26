@@ -4,21 +4,17 @@ import { piecesDataType } from "@/types/piecesTypes";
 import { styled } from "styled-components";
 import ChessPiece from "./chessPiece";
 
-export default function MappedPieces({
-  chessPieces,
-}: {
-  chessPieces: piecesDataType[];
-}) {
+export default function MappedPieces({ data }: { data: piecesDataType[] }) {
   return (
     <ChessPiecesBox>
-      {chessPieces.map((piece) => (
+      {data.map((piece) => (
         <ChessPiece chessPiece={piece} key={piece.id} />
       ))}
     </ChessPiecesBox>
   );
 }
 
-const ChessPiecesBox = styled.section`
+const ChessPiecesBox = styled.main`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
