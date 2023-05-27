@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { MainContextProvider } from "@/context/mainContext";
 import "@/styles/globals.css";
@@ -24,6 +25,7 @@ export default function RootLayout({
         <MainContextProvider>
           <Header />
           {children}
+          <Footer />
         </MainContextProvider>
       </body>
     </html>
