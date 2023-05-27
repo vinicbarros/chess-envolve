@@ -135,13 +135,22 @@ const Trash = styled.div`
   justify-content: center;
   cursor: pointer;
 
-  background: rgb(60, 60, 60);
+  background: rgb(83, 82, 96);
   background: linear-gradient(
     0deg,
-    rgba(60, 60, 60, 1) 0%,
-    rgba(100, 100, 115, 1) 100%,
-    rgba(208, 208, 208, 1) 100%
+    rgba(83, 82, 96, 1) 30%,
+    rgba(136, 136, 136, 1) 100%
   );
+
+  &:hover {
+    background: rgb(76, 76, 82);
+    background: linear-gradient(
+      0deg,
+      rgba(76, 76, 82, 1) 30%,
+      rgba(115, 110, 110, 1) 100%
+    );
+  }
+
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
   @media (max-width: 481px) {
