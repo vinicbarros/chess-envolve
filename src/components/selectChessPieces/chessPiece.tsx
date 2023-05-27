@@ -48,6 +48,7 @@ const ChessBox = styled.div<ChessBoxProps>`
   height: 216px;
   background-color: #45556c;
   padding: 11px;
+  cursor: pointer;
 
   align-items: center;
   justify-content: center;
@@ -56,7 +57,7 @@ const ChessBox = styled.div<ChessBoxProps>`
   position: relative;
 
   border: ${(props) =>
-    props.$clicked ? "4px solid green " : "4px solid #45556c"};
+    props.$clicked ? "4px solid #0F253A" : "4px solid #45556c"};
 
   @media (max-width: 1250px) {
     width: calc(50% - 10px);
@@ -73,6 +74,9 @@ const ChessBox = styled.div<ChessBoxProps>`
   @media (max-width: 481px) {
     height: 238px;
   }
+
+  box-shadow: ${(props) =>
+    props.$clicked ? "rgba(0, 0, 0, 0.35) 0px 5px 15px" : "none"};
 `;
 
 interface ChessBoxProps {

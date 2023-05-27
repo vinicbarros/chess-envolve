@@ -4,23 +4,25 @@ import { styled } from "styled-components";
 export default function BoxWrapper({
   element,
   title,
+  type,
 }: {
   element: JSX.Element;
   title: string;
+  type: string;
 }) {
   return (
-    <Container>
+    <Container $type={type}>
       <Title>{title}</Title>
       {element}
     </Container>
   );
 }
 
-const Container = styled.section`
+const Container = styled.section<ContainerType>`
   background-color: #21394f;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: ${(props) => (props.$type === "main" ? "50%" : "100%")};
   height: fit-content;
 
   padding: 15px 15px 20px 15px;
@@ -29,7 +31,15 @@ const Container = styled.section`
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
+
+  &:nth-child(2) {
+    margin-top: 21px;
+  }
 `;
+
+type ContainerType = {
+  $type: string;
+};
 
 const Title = styled.h1`
   font-size: 15px;

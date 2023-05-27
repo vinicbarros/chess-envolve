@@ -19,7 +19,9 @@ export default function ListChessPiece({
   return (
     <ChessBox>
       <Wrapper>
-        <Image src={chessPiece.image} alt={chessPiece.name} />
+        <ImageWrapper>
+          <Image src={chessPiece.image} alt={chessPiece.name} />
+        </ImageWrapper>
         <InfoBox>
           <Title>{chessPiece.name}</Title>
           <Description>{chessPiece.description}</Description>
@@ -54,17 +56,39 @@ const ChessBox = styled.div`
   & + & {
     margin-top: 2px;
   }
+
+  @media (max-width: 481px) {
+    height: 120px;
+    position: relative;
+  }
 `;
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 481px) {
+    &:nth-child(2) {
+      flex-direction: column;
+      position: absolute;
+      top: 11px;
+      right: 11px;
+    }
+  }
 `;
 
 const Image = styled.img`
   height: 44px;
-  margin-left: 13px;
-  margin-right: 68px;
+`;
+
+const ImageWrapper = styled.div`
+  width: 27px;
+  margin-right: 50px;
+  margin-left: 12px;
+
+  @media (max-width: 600px) {
+    margin-right: 10px;
+  }
 `;
 
 const InfoBox = styled.div``;
@@ -94,6 +118,10 @@ const ValueBox = styled.div`
   font-weight: 700;
   font-size: 13px;
   line-height: 18px;
+
+  @media (max-width: 481px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const Trash = styled.div`
@@ -105,6 +133,7 @@ const Trash = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   background: rgb(60, 60, 60);
   background: linear-gradient(
@@ -114,4 +143,8 @@ const Trash = styled.div`
     rgba(208, 208, 208, 1) 100%
   );
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  @media (max-width: 481px) {
+    margin-left: 60px;
+  }
 `;
