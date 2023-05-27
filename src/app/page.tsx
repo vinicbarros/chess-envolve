@@ -5,6 +5,7 @@ import ResumeSelection from "@/components/resumeSelection/resumeSelection";
 import MappedPieces from "@/components/selectChessPieces/mappedPieces";
 import { piecesDataType } from "@/types/piecesTypes";
 import dynamic from "next/dynamic";
+import Loading from "@/components/loading";
 
 const getDados = async (): Promise<piecesDataType[]> => {
   const res = await fetch("http://localhost:5000/api/pieces");
@@ -15,7 +16,7 @@ const DynamicContainer = dynamic(
   () => import("../components/common/container"),
   {
     ssr: false,
-    loading: () => <p>Loading page soon...</p>,
+    loading: () => <Loading />,
   }
 );
 
