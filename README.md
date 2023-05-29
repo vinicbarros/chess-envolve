@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center"><img src="https://i.imgur.com/ZOFZz8k.png"></img></div>
+<hr>
+<h2 align=center>Chess Envolve</h2>
+<h3 align=center>Aplicativo Web | Projeto Front-End</h3>
+<hr>
+<h4 align=center>Esse projeto é parte de um processo seletivo da Envolve para a vaga de Desenvolvedor.</h4>
 
-## Getting Started
+<h4 align=center>O objetivo do projeto técnico era criar uma aplicação em NextJs para selecionar peças de Xadrez.</h4>
 
-First, run the development server:
+<div align=center style="display: flex; flex-direction: row; justify-content: center; gap: 5%;">
+  <div>
+    <img width="500px" src="https://i.imgur.com/6089SVs.png">
+  </div>
+  <div>
+    <img width="500px" src="https://i.imgur.com/CA8AqJg.png">
+  </div>
+</div>
+
+## Requisitos do teste:
+
+- [x] Listagem de peças de xadrez com imagem, nome, descrição e valor
+- [x] Borda para marcar seleção de peças
+- [x] Layout Responsivo
+- [x] Mostrar valor total da seleção e quantidade de peças selecionadas
+
+## Funcionalidades da aplicação:
+
+- [x] Listagem de peças
+- [x] Borda para marcar qual peça está selecionada
+- [x] Tela de Loading
+- [x] Layout responsivo
+- [x] Listagem de peças selecionadas
+
+### Como rodar a aplicação
+
+<hr>
+
+OBS: Certifique-se de estar rodando a API fornecida na Case do projeto.
+
+1. Clone o projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/vinicbarros/chess-envolve.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Vá para o diretório do projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd chess-envolve
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Instale as dependências
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Rode a aplicação
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. Acesse a aplicação por
+```bash
+  http://localhost:3000/
+```
 
-## Deploy on Vercel
+## Ferramentas utilizadas:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p>
+  <img style='margin: 5px;' src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB'>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
+  <img style='margin: 5px;' src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white'/>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
+  <img style='margin: 5px;' src='https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white'/>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" />
+  <img style='margin: 5px;' src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E">
+</p>
