@@ -3,7 +3,7 @@
 <h2 align=center>Chess Envolve</h2>
 <h3 align=center>Aplicativo Web | Projeto Front-End</h3>
 <hr>
-<h4 align=center>Esse projeto é parte de um processo seletivo da Envolve para a vaga de Desenvolvedor.</h4>
+<h4 align=center>Esse projeto é parte de um processo seletivo da Envolve para a vaga de Desenvolvedor Front-End.</h4>
 
 <h4 align=center>O objetivo do projeto técnico era criar uma aplicação em NextJs para selecionar peças de Xadrez.</h4>
 
