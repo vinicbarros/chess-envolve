@@ -31,6 +31,24 @@
 - [x] Layout responsivo
 - [x] Listagem de peças selecionadas
 
+### Como rodar a API
+
+1. Baixe a api pelo seguinte link:
+ ```bash
+   https://drive.google.com/file/d/1iAg0WTsaIr9_YCoDrXyKGMtaE5gKR-h6/view
+```
+
+2. Instale as dependências
+```bash
+  npm install
+```
+
+3. Rode a API
+
+```bash
+  node api.js
+```
+
 ### Como rodar a aplicação
 
 <hr>
